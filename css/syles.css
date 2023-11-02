@@ -82,9 +82,11 @@
   font-size: 40px;
 }
 
-#social-container li:hover {
-  transform: translate(-3px, -3px);
-  transition: transform .5s;
+@media (min-width: 768px) {
+  #social-container li:hover {
+    transform: translate(-3px, -3px);
+    transition: transform .5s;
+  }
 }
 
 #email-container {
@@ -215,8 +217,25 @@
     align-items: center;
   }
 
-  #social-container  li{
-    padding: 0px 15px;
+  #social-container{
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    width: 90%;
+  }
+
+  #social-container li {
+    padding-left: 15px;
+  }
+
+  #social-container li[disabled]:hover {
+    transform: translate(-3px, -3px);
+    transition: transform .5s;
+  }
+
+  #email-container {
+    border-bottom: 1px solid var(--border-color);
+    width: 90%;
+    padding-bottom: 15px;
   }
 
   #about-container {
