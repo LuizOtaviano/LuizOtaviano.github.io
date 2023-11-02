@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Variavéis */
+:root {
+  --main-color: #8a2be2;
+  --main-text-color: #fff;
+  --border-color: #A29C9B;
+  --bio-bg-color: #121214;
+  --bio-border-color: #A29C9B;
+  --about-bg-color: #121214;
+}
+
+/* General */
+.highlights {
+  color: var(--main-color);
+}
+
+#container {
+  display: flex;
+  color: white;
+}
+
+#bio-container {
+  flex: 1 1 20%;
+  min-height: 100vh;
+  background-color: var(--bio-bg-color);
+  text-align: center;
+  padding: 30px 20px;
+  border-right: 5px solid var(--bio-border-color);
+}
+
+#about-container {
+  flex: 1 1 80%;
+  min-height: 100vh;
+  background-color: var(--about-bg-color);
+}
+
+/* bio container */
+
+#bio-container q {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#bio-container #welcome-text {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#bio-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+
+#social-container {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
+
+#social-container li {
+  flex: 1 1 0;
+  max-width: 60px;
+}
+
+#social-container li a {
+  color: var(--main-color);
+  font-size: 40px;
+}
+
+#social-container li:hover {
+  transform: translate(-3px, -3px);
+  transition: transform .5s;
+}
+
+#email-container {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+#email-container a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  max-width: 255px;
+  font-weight: bold;
+}
+
+#email-container ion-icon {
+  color: var(--main-color);
+  font-size: 25px;
+  max-width: 25px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+/* About container */
+
+#about-container {
+  padding: 40px;
+}
+
+#name {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+#title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.description {
+  max-width: 75%;
+  margin-bottom: 20px;
+}
+
+#btn-project {
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  background-color: var(--main-color);
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: .5s;
+  margin: 25px 0px;
+  padding: 12px 10px;
+  width: 150px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#btn-project ion-icon {
+  font-size: 25px;
+  max-width: 25px;
+}
+
+#btn-project:hover {
+  background-color: transparent;
+}
+
+#skills-section-title {
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+#skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.skills-box {
+  flex: 1 1 33%;
+  max-width: 33%;
+  margin-bottom: 35px;
+}
+
+.skills-title {
+  font-size: 24px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  padding-left: 10px;
+  border-left: 5px solid var(--main-color);
+}
+
+.skills-box i {
+  font-size: 45px;
+  margin-right: 10px;
+}
+
+.skills-box img {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+
+/* Mobile */
+
+@media(max-width: 450px) {
+  #container {
+    flex-direction: column;
+  }
+
+  #bio-container {
+    min-height: auto;
+    border-right: none;
+    border-bottom: 5px solid var(--bio-border-color);
+  }
+
+  #bio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #social-container  li{
+    padding: 0px 15px;
+  }
+
+  #about-container {
+    text-align: center;
+    padding: 30px;
+    min-height: calc(100% - 40px);
+  }
+
+  #about-container .description {
+    margin: 10px auto;
+    max-width: 100%;
+    line-height: 26px;
+  }
+
+  #btn-project {
+    margin: 20px auto;
+  }
+
+  .skills-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+  .skills-box i {
+    font-size: 60px;
+  }
+}
